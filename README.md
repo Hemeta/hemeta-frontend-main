@@ -1,16 +1,16 @@
-# [HemetaHeme Frontend](https://app.otterclam.finance/)
+# [HemetaHeme Frontend](https://app.hemeta.net)
 This is the front-end repo for HemetaHeme Finance.
 
 ##  🔧 Setting up Local Development
 
 Required: 
-- [Node v14](https://nodejs.org/download/release/latest-v14.x/)  
-- [Yarn](npm install --global yarn) 
-- [Git](https://git-scm.com/downloads)
+- [Node v14] (https://nodejs.org/download/release/latest-v14.x/)  
+- [Yarn] (npm install --global yarn) 
+- [Git] (https://git-scm.com/downloads)
 
 
 ```bash
-git clone https://github.com/OtterClam/otter-frontend.git
+git clone https://github.com/Hemeta/hemeta-frontend-main.git
 cd hemeta-frontend
 yarn install
 npm run start
