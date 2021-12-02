@@ -1,11 +1,11 @@
-import './notfound.scss';
+.not-found-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 
-function NotFound() {
-  return (
-    <div className="not-found-page">
-      <p>Page not found</p>
-    </div>
-  );
+  p {
+    font-weight: 600;
+    font-size: 30px;
+  }
 }
-
-export default NotFound;
