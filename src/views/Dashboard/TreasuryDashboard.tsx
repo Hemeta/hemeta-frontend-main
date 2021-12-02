@@ -8,7 +8,7 @@ import { IReduxState } from 'src/store/slices/state.interface';
 import Chart from '../../components/Chart/Chart.jsx';
 import { formatCurrency, getTokenImage, trim } from '../../helpers';
 import apollo from '../../lib/apolloClient';
-import OtterKing from './otterking.png';
+import HemetaKing from './hemetaking.png';
 import './treasury-dashboard.scss';
 import { bulletpoints, itemType, tooltipInfoMessages, tooltipItems, treasuryDataQuery } from './treasuryData.js';
 
@@ -29,7 +29,7 @@ function TreasuryDashboard() {
   const totalSupply = useSelector<IReduxState, number>(state => state.app.totalSupply);
   const marketCap = useSelector<IReduxState, number>(state => state.app.marketCap);
   const currentIndex = useSelector<IReduxState, string>(state => state.app.currentIndex);
-  const backingPerClam = useSelector<IReduxState, number>(state => state.app.backingPerClam);
+  const backingPerHeme = useSelector<IReduxState, number>(state => state.app.backingPerHeme);
   const stakingRatio = useSelector<IReduxState, number>(state => state.app.stakingRatio);
 
   const displayData = [
@@ -38,9 +38,9 @@ function TreasuryDashboard() {
       value: marketCap ? formatCurrency(marketCap, 0) : null,
     },
     {
-      title: 'CLAM Price',
+      title: 'HEME Price',
       value: marketPrice ? formatCurrency(marketPrice, 2) : null,
-      image: getTokenImage('clam'),
+      image: getTokenImage('heme'),
     },
     {
       title: 'Staking Ratio',
@@ -52,12 +52,12 @@ function TreasuryDashboard() {
       value: circSupply ? `${numberFormatter.format(circSupply)} / ${numberFormatter.format(totalSupply)}` : null,
     },
     {
-      title: 'Backing per CLAM',
-      value: backingPerClam ? formatCurrency(backingPerClam, 2) : null,
+      title: 'Backing per HEME',
+      value: backingPerHeme ? formatCurrency(backingPerHeme, 2) : null,
     },
     {
       title: 'Current Index',
-      value: currentIndex ? trim(currentIndex, 2) + ' sCLAM' : null,
+      value: currentIndex ? trim(currentIndex, 2) + ' sHEME' : null,
       info: tooltipInfoMessages.currentIndex,
     },
   ];
@@ -74,7 +74,7 @@ function TreasuryDashboard() {
       setData(metrics);
       // @ts-ignore
       let staked = r.data.protocolMetrics.map(entry => ({
-        staked: (parseFloat(entry.sClamCirculatingSupply) / parseFloat(entry.clamCirculatingSupply)) * 100,
+        staked: (parseFloat(entry.sHemeCirculatingSupply) / parseFloat(entry.hemeCirculatingSupply)) * 100,
         timestamp: entry.timestamp,
       }));
       // @ts-ignore
@@ -105,10 +105,10 @@ function TreasuryDashboard() {
       <div className="hero">
         <Box component="div" color="text.primary">
           <p>Wen (3,3) becomes (🦦,🦦)</p>
-          <h1>Welcome to Otter Kingdom</h1>
+          <h1>Welcome to Hemeta Kingdom</h1>
           <h3>The Decentralized Reserve Memecoin</h3>
         </Box>
-        <img src={OtterKing} />
+        <img src={HemetaKing} />
       </div>
       <div className="wave" />
       <Container
@@ -226,11 +226,11 @@ function TreasuryDashboard() {
                   <Chart
                     type="area"
                     data={data}
-                    dataKey={['treasuryClamMaiPOL']}
+                    dataKey={['treasuryHemeMaiPOL']}
                     stopColor={[['rgba(128, 204, 131, 1)', 'rgba(128, 204, 131, 0.5)']]}
-                    headerText="Protocol Owned Liquidity CLAM-MAI"
+                    headerText="Protocol Owned Liquidity HEME-MAI"
                     // @ts-ignore
-                    headerSubText={`${data && trim(data[0].treasuryClamMaiPOL, 2)}% `}
+                    headerSubText={`${data && trim(data[0].treasuryHemeMaiPOL, 2)}% `}
                     dataFormat="percent"
                     bulletpointColors={bulletpoints.pol}
                     itemNames={tooltipItems.pol}
@@ -272,7 +272,7 @@ function TreasuryDashboard() {
                     data={staked}
                     dataKey={['staked']}
                     stopColor={[['rgba(255, 220, 119, 1)', 'rgba(255, 220, 119, 0.5)']]}
-                    headerText="CLAM Staked"
+                    headerText="HEME Staked"
                     dataFormat="percent"
                     // @ts-ignore
                     headerSubText={`${staked && trim(staked[0].staked, 2)}% `}
