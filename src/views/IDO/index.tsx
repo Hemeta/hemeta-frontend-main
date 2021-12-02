@@ -242,7 +242,7 @@ export default function IDO() {
           </div>
         )}
         <div className={styles.claimButton}>
-          <a style={{ textDecoration: 'none' }} href="https://app.hemetaheme.finance">
+          <a style={{ textDecoration: 'none' }} href="https://app.hemeta.net">
             <Button variant="contained" color="primary" size="medium" disableElevation>
               Enter app
             </Button>
@@ -287,7 +287,7 @@ export default function IDO() {
             ) : (
               <div className={styles.soldOutContainer}>
                 <p className={styles.soldOut}>Sold Out!</p>
-                <a style={{ textDecoration: 'none' }} href="https://app.hemetaheme.finance">
+                <a style={{ textDecoration: 'none' }} href="https://app.hemeta.net">
                   <Button variant="contained" color="primary" size="large" disableElevation>
                     Open App
                   </Button>
