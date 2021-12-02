@@ -1,4 +1,4 @@
-# [HemetaHeme Frontend](https://app.hemetaheme.finance/)
+# [HemetaHeme Frontend](https://app.hemeta.net/)
 This is the front-end repo for HemetaHeme Finance.
 
 ##  🔧 Setting up Local Development
