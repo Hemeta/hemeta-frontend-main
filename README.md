@@ -10,7 +10,7 @@ Required:
 
 
 ```bash
-git clone https://github.com/HemetaHeme/hemeta-frontend.git
+git clone https://github.com/HemetaHeme/hemeta-frontend-main.git
 cd hemeta-frontend
 yarn install
 npm run start
