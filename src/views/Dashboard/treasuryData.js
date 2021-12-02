@@ -6,16 +6,16 @@ query {
   protocolMetrics(first: 100, orderBy: timestamp, orderDirection: desc) {
     id
     timestamp
-    hemeCirculatingSupply
-    sHemeCirculatingSupply
+    clamCirculatingSupply
+    sClamCirculatingSupply
     totalSupply
-    hemePrice
+    clamPrice
     marketCap
     totalValueLocked
     treasuryRiskFreeValue
     treasuryMarketValue
     nextEpochRebase
-    nextDistributedHeme
+    nextDistributedClam
     treasuryMaiRiskFreeValue
     treasuryMaiMarketValue
     treasuryFraxMarketValue
@@ -28,7 +28,7 @@ query {
     runway5k
     runway2dot5k
     runwayCurrent
-    treasuryHemeMaiPOL
+    treasuryClamMaiPOL
   }
 }
 `;
@@ -187,23 +187,23 @@ export const tooltipItems = {
   tvl: ['Total Value Deposited'],
   coin: ['MAI', 'FRAX'],
   rfv: ['MAI', 'FRAX'],
-  holder: ['HEMEies'],
+  holder: ['CLAMies'],
   apy: ['APY'],
   runway: ['Current', '7.5K APY', '5K APY', '2.5K APY'],
   pol: ['LP Treasury', 'Market LP'],
 };
 
 export const tooltipInfoMessages = {
-  tvl: 'Total Value Deposited, is the dollar amount of all HEME staked in the protocol. This metric is often used as growth or health indicator in DeFi projects.',
+  tvl: 'Total Value Deposited, is the dollar amount of all CLAM staked in the protocol. This metric is often used as growth or health indicator in DeFi projects.',
   mvt: 'Market Value of Treasury Assets, is the sum of the value (in dollars) of all assets held by the treasury.',
-  rfv: 'Risk Free Value, is the amount of funds the treasury guarantees to use for backing HEME.',
+  rfv: 'Risk Free Value, is the amount of funds the treasury guarantees to use for backing CLAM.',
   pol: 'Protocol Owned Liquidity, is the amount of LP the treasury owns and controls. The more POL the better for the protocol and its users.',
-  holder: 'Holders, represents the total number of hemetas (sHEME holders)',
-  staked: 'HEME Staked, is the ratio of sHEME to HEME (staked vs unstaked)',
+  holder: 'Holders, represents the total number of otters (sCLAM holders)',
+  staked: 'CLAM Staked, is the ratio of sCLAM to CLAM (staked vs unstaked)',
   apy: 'Annual Percentage Yield, is the normalized representation of an interest rate, based on a compounding period over one year. Note that APYs provided are rather ballpark level indicators and not so much precise future results.',
-  runway: 'Runway, is the number of days sHEME emissions can be sustained at a given rate. Lower APY = longer runway',
+  runway: 'Runway, is the number of days sCLAM emissions can be sustained at a given rate. Lower APY = longer runway',
   currentIndex:
-    'The current index tracks the amount of sHEME accumulated since the beginning of staking. Basically, how much sHEME one would have if they staked and held a single HEME from day 1.',
+    'The current index tracks the amount of sCLAM accumulated since the beginning of staking. Basically, how much sCLAM one would have if they staked and held a single CLAM from day 1.',
 };
 
 export const itemType = {
