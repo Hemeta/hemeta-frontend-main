@@ -1,0 +1,142 @@
+@import 'styles/_colors.scss';
+
+#treasury-dashboard-view {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 100%;
+  // width: 100%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: auto;
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .ohm-card {
+    max-width: unset !important;
+    width: 100%;
+    margin: auto;
+    max-height: 355px;
+    .card-header {
+      margin-bottom: 1rem;
+    }
+    &.ohm-chart-card {
+      .chart-card-header {
+        padding: 0px 20px !important;
+        min-width: 300px;
+      }
+      height: 355px;
+    }
+  }
+
+  .hero-metrics {
+    width: 100%;
+    margin-bottom: 23px;
+    text-align: start;
+    &__paper {
+      background-color: transparent;
+      max-width: unset !important;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+      h4 {
+        font-weight: 700;
+      }
+      h6 {
+        font-weight: 700;
+      }
+
+      div.metric-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        padding: 20px;
+        height: 100px;
+        margin: 15px 0px;
+        min-width: 120px;
+        width: 30%;
+      }
+
+      div.metric {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+    }
+  }
+  .data-grid {
+    overflow: hidden;
+  }
+}
+
+.smaller {
+  .ohm-card {
+    width: 97%;
+  }
+  .hero-metrics .ohm-card {
+    > .MuiBox-root {
+      flex-direction: column;
+      align-items: center;
+      // flex-wrap: wrap;
+    }
+    div.metric-container {
+      width: 100% !important;
+      margin: 15px 0 !important;
+      min-width: unset !important;
+      text-align: center !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+  }
+}
+
+.mobile {
+  div.metric-container {
+    width: 100% !important;
+    margin: 15px 0 !important;
+    min-width: unset !important;
+    text-align: left !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+}
+
+.very-small {
+  .hero-metrics .ohm-card {
+    > .MuiBox-root {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  color: $hemeta-dark;
+  gap: 8px;
+
+  p {
+    font-size: 24px;
+  }
+
+  @media screen and (max-width: 596px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  img {
+    width: 226px;
+    height: 226px;
+  }
+}

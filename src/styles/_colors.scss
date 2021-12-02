@@ -1,0 +1,21 @@
+$hemeta-dark: #1d2654;
+$hemeta-blue: #3b4bd8;
+$hemeta-blue-hover: #303fc7;
+$light-gray100: #f7f9fb;
+$light-gray200: #e9f0f3;
+$light-gray300: #dbe6ec;
+$light-gray400: #ccd4e0;
+$heme-pink: #ff6854;
+$dark-grey: #434e77;
+$dark-gray300: #434e77;
+
+:export {
+  hemetaDark: $hemeta-dark;
+  hemetaBlue: $hemeta-blue;
+  lightGray100: $light-gray100;
+  lightGray200: $light-gray200;
+  lightGray300: $light-gray300;
+  hemePink: $heme-pink;
+  darkGrey: $dark-grey;
+  darkGray300: $dark-gray300;
+}
