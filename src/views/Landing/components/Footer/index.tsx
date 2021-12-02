@@ -45,7 +45,7 @@ export default function Footer({ backgroundColor }: Props) {
         <img src={PolygonLogo} alt="logo" />
       </div>
       <div className="contact-us">
-        <Link href="mailto:dev@hemetaheme.finance">Contact Us</Link>
+        <Link href="mailto:info@hemeta.net">Contact Us</Link>
       </div>
     </footer>
   );
