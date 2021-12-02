@@ -78,7 +78,7 @@ function NavContent() {
     return (state.app && state.app.networkID) || DEFAULT_NETWORK;
   });
   const addresses = getAddresses(networkID);
-  const { CLAM_ADDRESS } = addresses;
+  const { HEME_ADDRESS } = addresses;
 
   const checkPage = useCallback((location: any, page: Page): boolean => {
     const currentPath = location.pathname.replace('/', '');
@@ -95,7 +95,7 @@ function NavContent() {
     <Paper className="dapp-sidebar">
       <Box className="dapp-sidebar" display="flex" justifyContent="space-between" flexDirection="column">
         <div className="dapp-menu-top">
-          <Link href="https://www.otterclam.finance" target="_blank">
+          <Link href="https://www.hemeta.net" target="_blank">
             <Box display="flex" flexDirection="column" className="branding-header">
               <AppLogo />
               <Box mt="10px" />
@@ -177,14 +177,14 @@ function NavContent() {
               </div>
 
               <Link
-                href={'https://quickswap.exchange/#/swap?outputCurrency=' + CLAM_ADDRESS}
+                href={'https://quickswap.exchange/#/swap?outputCurrency=' + HEME_ADDRESS}
                 target="_blank"
                 rel="noreferrer"
                 className="button-dapp-menu"
               >
                 <div className="dapp-menu-item">
                   <InactiveMenuIcon />
-                  <p>Buy CLAM2</p>
+                  <p>Buy HEME2</p>
                 </div>
               </Link>
               <Link
@@ -212,7 +212,7 @@ function NavContent() {
                 <Box
                   className="light-dark-toggle"
                   component="button"
-                  bgcolor="otter.otterBlue"
+                  bgcolor="hemeta.hemetaBlue"
                   display="flex"
                   justifyContent="center"
                   alignItems="center"
@@ -231,7 +231,7 @@ function NavContent() {
                 <Box
                   className="light-dark-toggle"
                   component="button"
-                  bgcolor="otter.white"
+                  bgcolor="hemeta.white"
                   display="flex"
                   justifyContent="center"
                   alignItems="center"
