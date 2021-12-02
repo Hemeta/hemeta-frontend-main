@@ -11,7 +11,7 @@ Required:
 
 ```bash
 git clone https://github.com/Hemeta/hemeta-frontend-main.git
-cd hemeta-frontend
+cd hemeta-frontend-main
 yarn install
 npm run start
 ```
