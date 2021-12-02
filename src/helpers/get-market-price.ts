@@ -1,6 +1,6 @@
 import { BigNumber, ethers } from 'ethers';
 import { getAddresses } from '../constants';
-import { HEMEMaiReserveContract as HEMEMaiReserveContract } from '../abi';
+import { HEMEMaiReserveContract } from '../abi';
 
 export async function getMarketPrice(
   networkID: number,
