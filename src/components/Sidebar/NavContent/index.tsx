@@ -95,7 +95,7 @@ function NavContent() {
     <Paper className="dapp-sidebar">
       <Box className="dapp-sidebar" display="flex" justifyContent="space-between" flexDirection="column">
         <div className="dapp-menu-top">
-          <Link href="https://www.hemetaheme.finance" target="_blank">
+          <Link href="https://www.hemeta.net" target="_blank">
             <Box display="flex" flexDirection="column" className="branding-header">
               <AppLogo />
               <Box mt="10px" />
