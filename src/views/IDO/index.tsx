@@ -242,7 +242,7 @@ export default function IDO() {
           </div>
         )}
         <div className={styles.claimButton}>
-          <a style={{ textDecoration: 'none' }} href="https://app.hemeta.net">
+          <a style={{ textDecoration: 'none' }} href="https://app.otterclam.finance">
             <Button variant="contained" color="primary" size="medium" disableElevation>
               Enter app
             </Button>
