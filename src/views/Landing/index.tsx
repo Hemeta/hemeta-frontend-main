@@ -39,7 +39,7 @@ function Landing() {
             <div className="landing__first-section__body__subtitle">
               <p>The first store of value meme</p>
             </div>
-            <a className="landing__first-section__body__app-button" href="https://app.hemeta.net">
+            <a className="landing__first-section__body__app-button" href="https://app.otterclam.finance">
               <Button variant="contained" color="primary" size="medium" disableElevation>
                 Enter APP
               </Button>
