@@ -42,7 +42,7 @@ function BondROI({ bond }: { bond: ComputedBond }) {
     return state.bonding[bond.value] && state.bonding[bond.value].bondPrice;
   });
   const marketPrice = useSelector<IReduxState, string>(state => state.bonding[bond.value]?.marketPrice);
-  const priceDiff = (Number(marketPrice) ?? 0) - (bondPrice ?? 0);
+  const priceDiff = (Number(marketPrice) ?? 2) - (bondPrice ?? 0);
   const dotColor = theme.palette.mode.chip.status.success;
   const dot = <span className="bond-pair-roi-dot" style={{ background: dotColor }} />;
   return (
